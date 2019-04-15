@@ -1,4 +1,5 @@
 import React from 'react';
+import createReactContext from 'create-react-context';
 
 import StoryPreviewDefault from '../Preview/StoryPreview';
 import FooterPreviewDefault from '../Preview/FooterPreview';
@@ -18,7 +19,7 @@ import {
   LAYOUT_TYPE_HEADER_MD,
 } from '../../const';
 
-const ReadmeContentContext = React.createContext({
+const ReadmeContentContext = createReactContext({
   withPreview: true,
 });
 
