@@ -20,7 +20,7 @@ import {
 } from '../../const';
 
 const ReadmeContentContext = createReactContext({
-  withPreview: true,
+  withPreview: false,
 });
 
 export default class ReadmeContent extends React.Component {
@@ -98,10 +98,7 @@ export default class ReadmeContent extends React.Component {
     } = this.props;
 
     return (
-      <ReadmeContentContext.Provider
-        value={{
-          notifyParent: this.notifyParent,
-        }}
+      <div
       >
         <div className={'storybook-readme-story'} ref={this.handleRef}>
           {layout.map(({ type, content }, index) => {
@@ -171,7 +168,7 @@ export default class ReadmeContent extends React.Component {
             }
           })}
         </div>
-      </ReadmeContentContext.Provider>
+      </div>
     );
   }
 }
